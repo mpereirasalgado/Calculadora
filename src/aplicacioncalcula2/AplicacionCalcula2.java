@@ -33,11 +33,48 @@ public class AplicacionCalcula2 {
         Modelo contenedor = new Modelo();
         contenedor.setNum1(Float.NaN);
         contenedor.setNum2(Float.NaN);
+        contenedor.setOperacion(opcion);
+        int opcion = 0;
         do{
-            swicht(Integer.parseInt(JOptionPane.showInputDialog("****MENU****\n")))
+            switch(Integer.parseInt(JOptionPane.showInputDialog("****MENU****\n"
+                    + "1.- SUMA\n"
+                    + "2.- RESTA\n"
+                    + "3.- MULTIPLICACION\n"
+                    + "4.- DIVISION\n"
+                    + "5.- SALIR\n"))){
+            case 1:
+                contenedor.setOperacion(0);
+                break;
+            case 2:
+                contenedor.setOperacion(1);
+                break;
+            case 3:
+                contenedor.setOperacion(2);
+                break;
+            case 4:
+                contenedor.setOperacion(3);
+                break;
+            case 5:
+                System.exit(opcion);
+                break;
         }
+        }while(opcion < 6 );
+        
+        
         
     }
-    public 
+    public static float realizarOperacion(Modelo contenedor){
+        float resultado=0;
+        if (contenedor.getOperacion() == 0){
+            resultado=contenedor.getNum1()+contenedor.getNum2();
+        }else if(contenedor.getOperacion() == 1){
+            resultado=contenedor.getNum1()-contenedor.getNum2();
+        }else if(contenedor.getOperacion() == 2){
+            resultado=contenedor.getNum1()*contenedor.getNum2();
+        }else if(contenedor.getOperacion()== 3){
+            resultado=contenedor.getNum1()/contenedor.getNum2();
+        }
+        return resultado;
+    }
     
 }
