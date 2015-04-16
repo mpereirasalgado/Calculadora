@@ -34,7 +34,7 @@ public class AplicacionCalcula2 {
         contenedor.setNum1(Float.NaN);
         contenedor.setNum2(Float.NaN);
         do{
-            swicht(Integer.parseInt(JOptionPane.showInputDialog("")))
+            swicht(Integer.parseInt(JOptionPane.showInputDialog("****MENU****")))
         }
         
     }
