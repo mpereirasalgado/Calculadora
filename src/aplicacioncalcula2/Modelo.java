@@ -13,12 +13,12 @@ package aplicacioncalcula2;
 public class Modelo {
     float num1, num2;
     float resultado;
-    int operacion;
+    float operacion;
 
     public Modelo() {
     }
 
-    public Modelo(float num1, float num2, int operacion, float resultado) {
+    public Modelo(float num1, float num2, float operacion, float resultado) {
         this.num1 = num1;
         this.num2 = num2;
         this.operacion = operacion;
@@ -41,11 +41,11 @@ public class Modelo {
         this.num2 = num2;
     }
 
-    public int getOperacion() {
+    public float getOperacion() {
         return operacion;
     }
 
-    public void setOperacion(int operacion) {
+    public void setOperacion(float operacion) {
         this.operacion = operacion;
     }
 
@@ -61,5 +61,9 @@ public class Modelo {
     public String toString() {
         return "Modelo{" + "num1=" + num1 + ", num2=" + num2 + ", operacion=" + operacion + ", resultado=" + resultado + '}';
     }
-    
+    public String toPrint(){
+        return " Los numeros son: "+ num1 +" y "+ num2 +"\n"+
+               " La operacion es: "+ operacion +"\n"+
+               " El resultado es: "+ resultado ;
+    }
 }
